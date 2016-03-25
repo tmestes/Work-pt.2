@@ -31,7 +31,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.openFileButton = new System.Windows.Forms.Button();
             this.storyTextBox = new System.Windows.Forms.TextBox();
-            this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.closeFileButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,9 +65,9 @@
             this.storyTextBox.Size = new System.Drawing.Size(703, 392);
             this.storyTextBox.TabIndex = 12;
             // 
-            // openFile
+            // openFileDialog1
             // 
-            this.openFile.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFile_FileOk);
             // 
             // closeFileButton
             // 
@@ -99,7 +99,7 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button openFileButton;
         private System.Windows.Forms.TextBox storyTextBox;
-        private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button closeFileButton;
     }
 }

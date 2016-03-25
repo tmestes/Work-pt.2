@@ -28,15 +28,23 @@ namespace mah_stuff
             try
             {
                 string story;
-                OpenFileDialog openFile;
                 StreamReader inputFile;
-                //page 310
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.InitialDirectory = "c:\\Users\\testes\\Desktop\\showcase" ;
+                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*" ;
+                openFileDialog1.FilterIndex = 2 ;
+                openFileDialog1.RestoreDirectory = true ;
+                //page 318
 
-                if (openFile.ShowDialog() == DialogResult.OK)
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    inputFile = File.OpenText(openFile.FileName);
+                    inputFile = File.OpenText(openFileDialog1.FileName);
+                    while (!inputFile.EndOfStream)
+                    {
+                        story = inputFile.ReadLine();
 
-                    storyTextBox.Text = story;
+                        storyTextBox.Text = story;
+                    }
                 }
                 else
                 {
@@ -51,7 +59,7 @@ namespace mah_stuff
 
         private void openFile_FileOk(object sender, CancelEventArgs e)
         {
-
+            
         }
 
         private void closeFileButton_Click(object sender, EventArgs e)
