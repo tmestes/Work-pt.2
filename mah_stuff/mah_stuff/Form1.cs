@@ -30,25 +30,28 @@ namespace mah_stuff
                 string story;
                 StreamReader inputFile;
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
-                openFileDialog1.InitialDirectory = "c:\\Users\\testes\\Desktop\\showcase" ;
-                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*" ;
-                openFileDialog1.FilterIndex = 2 ;
-                openFileDialog1.RestoreDirectory = true ;
+                openFileDialog1.InitialDirectory = "c:\\Users\\testes\\Desktop\\showcase";
+                openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
                 //page 318
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     inputFile = File.OpenText(openFileDialog1.FileName);
+                    storyTextBox.Text = "";
                     while (!inputFile.EndOfStream)
                     {
                         story = inputFile.ReadLine();
 
-                        storyTextBox.Text = story;
+                        storyTextBox.Text += story + "\r\n";
                     }
+                    inputFile.Close();
                 }
                 else
                 {
                     MessageBox.Show("Operation cancelled.");
+                    storyTextBox.Text = "";
                 }
             }
             catch (Exception ex)

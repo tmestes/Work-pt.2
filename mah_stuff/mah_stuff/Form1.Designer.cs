@@ -57,7 +57,9 @@
             // storyTextBox
             // 
             this.storyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.storyTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storyTextBox.Location = new System.Drawing.Point(12, 6);
+            this.storyTextBox.MaxLength = 327670000;
             this.storyTextBox.Multiline = true;
             this.storyTextBox.Name = "storyTextBox";
             this.storyTextBox.ReadOnly = true;
@@ -87,6 +89,7 @@
             this.Controls.Add(this.storyTextBox);
             this.Controls.Add(this.openFileButton);
             this.Controls.Add(this.exitButton);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Story Reader";
             this.ResumeLayout(false);
