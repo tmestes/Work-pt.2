@@ -57,7 +57,7 @@
             // storyTextBox
             // 
             this.storyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.storyTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storyTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storyTextBox.Location = new System.Drawing.Point(12, 6);
             this.storyTextBox.MaxLength = 327670000;
             this.storyTextBox.Multiline = true;
@@ -66,6 +66,7 @@
             this.storyTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.storyTextBox.Size = new System.Drawing.Size(703, 392);
             this.storyTextBox.TabIndex = 12;
+            this.storyTextBox.Text = "Please only select .txt files";
             // 
             // openFileDialog1
             // 
